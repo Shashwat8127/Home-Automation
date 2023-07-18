@@ -31,12 +31,12 @@ If not connected, it reads temperature and humidity data from the DHT sensor.
 It creates an HTTP POST request with the sensor data and sends it to the server.
 Waits for a few seconds before the next iteration.
 Control Appliances: The controlAppliances function takes a command as input and controls the corresponding appliances:
-# If the command is "light_on," it turns on the light by setting the relay pin 1 to HIGH.
-# If the command is "light_off," it turns off the light by setting the relay pin 1 to LOW.
-# If the command is "fan_on," it turns on the fan by setting the relay pin 2 to HIGH.
-# If the command is "fan_off," it turns off the fan by setting the relay pin 2 to LOW.
-# If the command is "lock," it locks the door by setting the relay pin 3 to HIGH.
-# If the command is "unlock," it unlocks the door by setting the relay pin 3 to LOW.
+If the command is "light_on," it turns on the light by setting the relay pin 1 to HIGH.
+If the command is "light_off," it turns off the light by setting the relay pin 1 to LOW.
+If the command is "fan_on," it turns on the fan by setting the relay pin 2 to HIGH.
+If the command is "fan_off," it turns off the fan by setting the relay pin 2 to LOW.
+If the command is "lock," it locks the door by setting the relay pin 3 to HIGH.
+If the command is "unlock," it unlocks the door by setting the relay pin 3 to LOW.
 Send Request: The sendRequest function is responsible for sending an HTTP POST request to the server with the provided request data. It establishes a connection with the server, sends the request, and closes the connection.
 Read Sensor Data: The readSensorData function reads the temperature and humidity values from the DHT sensor. If the sensor data is valid, it returns a string containing the data in the format "temperature=<value>&humidity=<value>". If there is an error reading the data, it returns the string "Error".
 Server-side: On the server side, you need to implement the necessary endpoints to handle the incoming requests from the Arduino.
